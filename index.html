@@ -1,0 +1,65 @@
+!
+<!Doctype html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Add Input Field</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+rel="stylesheet" integrity="sha384-
+F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+crossorigin="anonymous">
+
+ </head>
+ <body>
+ <div class="container text-center bg-success text-light my-5 p-3">
+ <h1>Table Row Add</h1>
+ </div>
+ <div class="container">
+ <table class="table table-bordered">
+ <thead>
+ <tr>
+ <th scope="col">Name of Nominee</th>
+ <th scope="col">Relation with Nominee</th>
+ <th scope="col">Nominee NID/Birth certificate</th>
+ <th scope="col">Nominee phone Number</th>
+ <th scope="col">Action</th>
+ </tr>
+ </thead>
+ <tbody id="rowadd">
+ <tr>
+ <td><input type="text" name="name[]" id="name" class="form-control"></td>
+ <td><input type="text" name="name[]" id="name" class="form-control"></td>
+ <td><input type="text" name="name[]" id="name" class="form-control"></td>
+ <td><input type="text" name="name[]" id="name" class="form-control"></td>
+ <td><button type="button" id="add" class="btn btn-success">+</button></td>
+ </tr>
+ <tr>
+  <td><input type="text" name="name[]" id="name" class="form-control"></td>
+  <td><input type="text" name="name[]" id="name" class="form-control"></td>
+  <td><input type="text" name="name[]" id="name" class="form-control"></td>
+  <td><input type="text" name="name[]" id="name" class="form-control"></td>
+  <td><button type="button" id="add" class="btn btn-success">+</button></td>
+  </tr>
+ </tbody>
+ </table>
+
+ </div>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ var i = 1;
+ $('#add').click (function()
+ i++;
+ $('#rowadd').append('<tr id="row'+i+'"><td><input type="text" name="name[]"
+id="name" class="form-control"></td><td><input type="text" name="name[]" id="name"
+class="form-control"></td><td><input type="text" name="name[]" id="text" class="formcontrol"></td><td><input type="text" name="name[]" id="name" class="formcontrol"></td><td><button type="button" id="'+i+'" class="btn btn-danger remove_row">
+</button></td></tr>');
+ });
+ 
+
+ </script>
+
+ </body>
+</html>
+
+!
